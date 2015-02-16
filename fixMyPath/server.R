@@ -139,7 +139,7 @@ cents <- SpatialPointsDataFrame(cents, data = leeds@data, match.ID = F)
                 , popup = sprintf("<b>Journeys by bike: </b>%s%%", round(ldata$pCycle*100,2))) %>%
      addGeoJSON(geojson) %>%
      addPopups(pedallers$lon, pedallers$lat, "The best bike shop in Leeds!") %>%
-     mapOptions(zoomToLimits = "never")
+     mapOptions(zoomToLimits = "first")
      
       ##%>%
       # #setView(lng = input$lng, lat = input$lat, zoom = input$myMap_zoom)
